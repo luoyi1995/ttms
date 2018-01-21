@@ -12,10 +12,27 @@
         <result column="upload_person" property="uploadPerson"/>
     </resultMap>
 
-  <select id="findTollInfo" resultMap="coursewareInfoResultMap">
-      SELECT * FROM courseware_info limit #{startIndex} ,#{pageSize}
+    <sql id="findByMessage">
+      <where>
+          <if test="name!=null and name!=''">
+              courseware_name LIKE concat("%",#{name},"%")
+          </if>
+          <if test="type!=null and type!=''">
+              and type_id=#{type}
+          </if>
+
+      </where>
+    </sql>
+
+  <select id="findTollInfo" resultType="java.util.Map">
+      SELECT i.*,t.type_name typeName FROM courseware_info i LEFT JOIN courseware_type t on i.type_id=t.id
+      <include refid="findByMessage"></include>
+      limit #{startIndex} ,#{pageSize}
   </select>
 
 
+    <select id="countInfoNum" resultType="long">
+        SELECT count(*) FROM  courseware_info <include refid="findByMessage"></include>
+    </select>
 
 </mapper>

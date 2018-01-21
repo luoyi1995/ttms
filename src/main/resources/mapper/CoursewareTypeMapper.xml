@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.zust.ttms.courseware.dao.CoursewareTypeDao">
+
+    <resultMap id="coursewareTypeResultMap" type="cn.zust.ttms.courseware.entity.CoursewareType">
+        <result property="id" column="id"/>
+        <result property="typeName" column="type_name"/>
+        <result property="note" column="note"/>
+        <result property="createdPerson" column="created_person"/>
+        <result property="createdTime" column="created_time"/>
+        <result property="modifiedPerson" column="modified_person"/>
+        <result property="modifiedTime" column="modified_time"/>
+    </resultMap>
+
+    <select id="findTotalType" resultMap="coursewareTypeResultMap">
+        SELECT * FROM courseware_type
+    </select>
+
+
+</mapper>

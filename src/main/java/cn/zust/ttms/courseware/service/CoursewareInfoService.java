@@ -1,9 +1,8 @@
 package cn.zust.ttms.courseware.service;
 
-import cn.zust.ttms.courseware.entity.CoursewareInfo;
-
-import java.util.List;
+import java.util.Map;
 
 public interface CoursewareInfoService {
-    List<CoursewareInfo> findTollInfo(int pageCurrent);
+    Map<String,Object> findTollInfo(int pageCurrent,Integer type,String name);
+
 }

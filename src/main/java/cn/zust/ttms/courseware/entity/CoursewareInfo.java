@@ -1,10 +1,13 @@
 package cn.zust.ttms.courseware.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class CoursewareInfo {
     private int id;                        //课程id
     private String coursewareName;         //课程名
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date uploadTime;               //上传时间
     private int typeId;                    //类别id
     private String note;                   //备注

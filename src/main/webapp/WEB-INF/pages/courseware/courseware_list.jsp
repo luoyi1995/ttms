@@ -10,7 +10,7 @@
 	   <div class="page-header">
 			<div class="page-title" style="padding-bottom: 5px">
 				<ol class="breadcrumb">
-				  <li class="active">项目信息管理</li>
+				  <li class="active">课件信息管理</li>
 				</ol>
 			</div>
 			<div class="page-stats"></div>
@@ -20,16 +20,16 @@
 			<div class="row page-search">
 			 <div class="col-md-12">
 				<ul class="list-unstyled list-inline">
-					<li><input type="text" id="searchNameId" class="form-control"placeholder="项目名称"></li>
+					<li><input type="text" id="searchNameId" class="form-control"placeholder="课件名称"></li>
 					<li><select id="searchValidId" class="form-control">
-							<option value="">选择状态</option>
-							<option value="1">启用</option>
-							<option value="0">禁用</option>
+							<option value="">课件类别</option>
+							<%--<option value="1">启用</option>--%>
+							<%--<option value="0">禁用</option>--%>
 					</select></li>
 					<li class='O1'><button type="button" class="btn btn-primary btn-search" >查询</button></li>
-					<li class='O2'><button type="button" class="btn btn-primary btn-add">添加</button></li>
-					<li class='O3'><button type="button" class="btn btn-primary btn-invalid">禁用</button></li>
-					<li class='O4'><button type="button" class="btn btn-primary btn-valid">启用</button></li>
+					<li class='O2'><button type="button" class="btn btn-primary btn-add">下载</button></li>
+					<%--<li class='O3'><button type="button" class="btn btn-primary btn-invalid">禁用</button></li>--%>
+					<%--<li class='O4'><button type="button" class="btn btn-primary btn-valid">启用</button></li>--%>
 				</ul>
 			  </div>
 			</div>
@@ -39,11 +39,11 @@
 					<thead>
 						<tr>
 						   <th>选择</th>
-							<th>项目编码</th>
-							<th>项目名称</th>
-							<th>开始时间</th>
-							<th>结束时间</th>
-							<th>状态</th>
+							<th>课件编码</th>
+							<th>课件名称</th>
+							<th>课件类别</th>
+							<th>课件上传人</th>
+							<th>上传时间</th>
 							<th>操作</th>
 						</tr>
 					</thead>
